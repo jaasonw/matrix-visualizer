@@ -7,7 +7,7 @@
 
   let _matrix: string;
   let input = "";
-  let error = "";
+  let error: string | any = "";
   let showError = false;
 
   function getExample() {
@@ -56,10 +56,12 @@
         class="flex flex-col w-full"
         on:submit|preventDefault={() => {
           try {
+            if (input == "") throw "Please enter a matrix";
             $matrix = csvToArray(input);
             katex.renderToString(matrixToLatex(csvToArray(input)));
             goto("/calc");
           } catch (e) {
+            error = e;
             showError = true;
           }
         }}

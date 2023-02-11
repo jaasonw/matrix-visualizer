@@ -130,7 +130,7 @@
 <div
   class="flex flex-col items-center justify-center border p-5 m-10 rounded-md w-11/12 max-w-3xl bg-gray-50"
 >
-  <div class="flex gap-2">
+  <div class="flex gap-2 m-3">
     {#if steps.length > 1}
       <div class="flex flex-col items-center">
         <h2>BEFORE</h2>
@@ -214,13 +214,19 @@
   </div>
 
   <div>
-    <button on:click={undo} class="text-2xl p-2 hover:text-gray-600"
+    <button
+      on:click={undo}
+      class="rounded-md p-1 m-1 hover:bg-black hover:text-white border"
       ><Fa icon={faArrowRotateLeft} /></button
     >
-    <button on:click={reset} class="text-2xl p-2 hover:text-gray-600"
+    <button
+      on:click={reset}
+      class="rounded-md p-1 m-1 hover:bg-black hover:text-white border"
       ><Fa icon={faArrowsRotate} /></button
     >
-    <button on:click={redo} class="text-2xl p-2 hover:text-gray-600"
+    <button
+      on:click={redo}
+      class="rounded-md p-1 m-1 hover:bg-black hover:text-white border"
       ><Fa icon={faArrowRotateRight} /></button
     >
   </div>
