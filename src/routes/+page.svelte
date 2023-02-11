@@ -11,7 +11,12 @@
   let showError = false;
 
   function getExample() {
-    input = `x 53 61\n10 x 7\n67 91 x`;
+    const examples = [
+      `x 53 61\n10 x 7\n67 91 x`,
+      `2 -4 4 0\na 2 -1 0\n0 1 -2 0`,
+      `lambda-1 53 61\n10 lambda-1 7\n67 91 lambda-1`,
+    ];
+    input = examples[Math.floor(Math.random() * examples.length)];
   }
 
   $: try {
