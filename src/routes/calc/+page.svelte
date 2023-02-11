@@ -13,6 +13,7 @@
     faFlag,
   } from "@fortawesome/free-solid-svg-icons";
   import Footer from "$lib/Footer.svelte";
+  import { simplify } from "mathjs";
 
   interface Step {
     matrix: string[][];
@@ -48,7 +49,7 @@
           parseInt(row),
           scalar
         ),
-        operation: `${scalar}R${parseInt(row) + 1}`,
+        operation: `${simplify(scalar).toTex()} R${parseInt(row) + 1}`,
       },
     ];
   }
@@ -63,7 +64,7 @@
           parseInt(row2),
           scalar
         ),
-        operation: `${scalar}R${parseInt(row1) + 1} + R${
+        operation: `${simplify(scalar).toTex()} R${parseInt(row1) + 1} + R${
           parseInt(row2) + 1
         } \\rightarrow R${parseInt(row2) + 1}`,
       },
