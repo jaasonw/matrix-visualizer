@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^1.0.0",
-    "@sveltejs/kit": "^1.0.0",
+    "@sveltejs/kit": "^1.5.5",
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
     "@types/katex": "^0.16.0",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
