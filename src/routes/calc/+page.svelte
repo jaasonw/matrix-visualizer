@@ -117,6 +117,14 @@
   }
 </script>
 
+<svelte:head>
+  <title>Matrix Visualizer</title>
+  <meta
+    name="description"
+    content="This calculator allows you to interactively perform row operations on an m x n dimensional matrix with support for symbolic math"
+  />
+</svelte:head>
+
 <div
   class="flex flex-col items-center justify-center border p-5 m-10 rounded-md w-11/12 max-w-3xl bg-gray-50"
 >
