@@ -11,6 +11,7 @@
     faArrowRotateRight,
     faArrowsRotate,
     faFlag,
+    faPlay,
   } from "@fortawesome/free-solid-svg-icons";
   import Footer from "$lib/Footer.svelte";
   import { simplify } from "mathjs";
@@ -167,8 +168,8 @@
       <div class="flex justify-end">
         <button
           type="submit"
-          class="rounded-md w-10 mx-3 hover:bg-black hover:text-white border"
-          >▶</button
+          class="flex justify-center items-center rounded-md w-10 mx-3 hover:bg-black hover:text-white border"
+          ><Fa icon={faPlay} /></button
         >
       </div>
     </form>
@@ -185,8 +186,8 @@
       <div class="flex justify-end">
         <button
           type="submit"
-          class="rounded-md w-10 mx-3 hover:bg-black hover:text-white border"
-          >▶</button
+          class="flex justify-center items-center rounded-md w-10 mx-3 hover:bg-black hover:text-white border"
+          ><Fa icon={faPlay} /></button
         >
       </div>
     </form>
@@ -205,8 +206,8 @@
       <div class="flex justify-end">
         <button
           type="submit"
-          class="rounded-md w-10 mx-3 hover:bg-black hover:text-white border"
-          >▶</button
+          class="flex justify-center items-center rounded-md w-10 mx-3 hover:bg-black hover:text-white border"
+          ><Fa icon={faPlay} /></button
         >
       </div>
     </form>
