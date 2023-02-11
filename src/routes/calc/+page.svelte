@@ -1,10 +1,10 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
-  import Footer from "$lib/Footer.svelte";
-  import HistoryController from "$lib/HistoryController.svelte";
-  import HistoryView from "$lib/HistoryView.svelte";
-  import RecentView from "$lib/RecentView.svelte";
-  import RowOpsController from "$lib/RowOpsController.svelte";
+  import Footer from "$lib/components/Footer.svelte";
+  import HistoryController from "$lib/components/HistoryController.svelte";
+  import HistoryView from "$lib/components/HistoryView.svelte";
+  import RecentView from "$lib/components/RecentView.svelte";
+  import RowOpsController from "$lib/components/RowOpsController.svelte";
   import type { Step } from "$lib/Step";
   import { matrix } from "$lib/stores";
   import { onMount } from "svelte";

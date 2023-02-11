@@ -3,8 +3,7 @@
   import { goto } from "$app/navigation";
   import { matrix } from "$lib/stores";
   import katex from "katex";
-  import Footer from "$lib/Footer.svelte";
-  import { onMount } from "svelte";
+  import Footer from "$lib/components/Footer.svelte";
 
   let _matrix: string;
   let input = "";

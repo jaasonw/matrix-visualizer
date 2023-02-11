@@ -1,20 +1,22 @@
 import { simplify } from "mathjs";
 
 /**
- * Creates a 2d matrix of n*n dimensions with initial values
- * @param n
- * @param initial (Optional) default = ""
+ * Converts a csv with space as the default separator to a 2d array, replacing
+ * all undefineds with "0"
+ * @param csv
+ * @param colSep
  * @returns
  */
-export function create2d(n: number, initial: any = "") {
-  return [...Array(n)].map((_) => Array(n).fill(initial));
+export function csvToArray(csv: string, rowSep = "\n", colSep = " ") {
+  const rows = csv.split(rowSep);
+  return rows.map((row) => row.split(colSep).map((e) => (e === "" ? "0" : e)));
 }
 
-export function csvToArray(csv: string, sep = " ") {
-  const rows = csv.split("\n");
-  return rows.map((row) => row.split(sep).map((e) => (e === "" ? "0" : e)));
-}
-
+/**
+ * Converts a matrix containing math expressions to latex statements
+ * @param matrix
+ * @returns
+ */
 export function matrixToLatex(matrix: string[][]) {
   let latex = "\\begin{bmatrix}";
   for (let row of matrix) {

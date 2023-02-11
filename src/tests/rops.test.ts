@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { rowSum, rowSwap, scalerMultiply } from "./rops";
+import { rowSum, rowSwap, scalerMultiply } from "../lib/rops";
 
 describe("row swapping", () => {
   it("swaps rows", () => {

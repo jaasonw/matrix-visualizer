@@ -3,10 +3,10 @@
   import katex from "katex";
   import { simplify } from "mathjs";
   import Fa from "svelte-fa";
-  import { rowSum, rowSwap, scalerMultiply } from "./rops";
+  import { rowSum, rowSwap, scalerMultiply } from "../rops";
   import RowSelector from "./RowSelector.svelte";
-  import type { Step } from "./Step";
-  import { matrix } from "./stores";
+  import type { Step } from "../Step";
+  import { matrix } from "../stores";
 
   export let steps: Step[];
   export let undoBuffer: Step[];

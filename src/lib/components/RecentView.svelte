@@ -1,7 +1,7 @@
 <script lang="ts">
   import katex from "katex";
-  import type { Step } from "./Step";
-  import { matrixToLatex } from "./util";
+  import type { Step } from "../Step";
+  import { matrixToLatex } from "../util";
 
   export let steps: Step[] = [];
 </script>

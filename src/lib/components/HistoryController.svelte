@@ -5,7 +5,7 @@
     faArrowsRotate,
   } from "@fortawesome/free-solid-svg-icons";
   import Fa from "svelte-fa";
-  import type { Step } from "./Step";
+  import type { Step } from "../Step";
 
   export let steps: Step[];
   export let undoBuffer: Step[];
