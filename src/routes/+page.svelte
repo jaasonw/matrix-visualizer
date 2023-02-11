@@ -4,6 +4,7 @@
   import { matrix } from "$lib/stores";
   import katex from "katex";
   import Footer from "$lib/Footer.svelte";
+  import { onMount } from "svelte";
 
   let _matrix: string;
   let input = "";
