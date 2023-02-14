@@ -9,7 +9,7 @@
 <h1 class="text-xl font-bold mb-3">Steps performed so far</h1>
 <div>
   <div class="flex flex-wrap gap-2">
-    {#each steps as step}
+    {#each steps as step (step.id)}
       <div class="flex items-center">
         <div>
           {@html katex.renderToString(step.operation)}

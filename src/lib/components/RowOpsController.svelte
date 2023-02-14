@@ -16,6 +16,7 @@
     steps = [
       ...steps,
       {
+        id: (Math.random() + 1).toString(36).substring(7),
         matrix: rowSwap(
           steps[steps.length - 1].matrix,
           parseInt(row1),
@@ -32,6 +33,7 @@
     steps = [
       ...steps,
       {
+        id: (Math.random() + 1).toString(36).substring(7),
         matrix: scalerMultiply(
           steps[steps.length - 1].matrix,
           parseInt(row),
@@ -46,6 +48,7 @@
     steps = [
       ...steps,
       {
+        id: (Math.random() + 1).toString(36).substring(7),
         matrix: rowSum(
           steps[steps.length - 1].matrix,
           parseInt(row1),
@@ -66,6 +69,7 @@
     const row2 = [...formData.entries()][1][1] as string;
     performRowSwap(row1, row2);
     undoBuffer = [];
+    error = "";
   }
 
   function handleScalarMuliply(e: any) {
@@ -75,6 +79,7 @@
     const row = [...formData.entries()][1][1] as string;
     performScalarMultiply(row, scalar);
     undoBuffer = [];
+    error = "";
   }
 
   function handleRowSum(e: any) {
@@ -89,6 +94,7 @@
     }
     performRowSum(row1, row2, scalar);
     undoBuffer = [];
+    error = "";
   }
 </script>
 
@@ -149,4 +155,7 @@
       >
     </div>
   </form>
+  {#if error != ""}
+    <div class="text-red-500">{error}</div>
+  {/if}
 </div>
