@@ -18,7 +18,6 @@ export function csvToArray(csv: string, rowSep = "\n", colSep = " ") {
  * @returns
  */
 export function matrixToLatex(matrix: string[][]) {
-  console.log("asdf");
   let latex = "\\begin{bmatrix}";
   for (let row of matrix) {
     for (let i = 0; i < row.length; ++i) {
