@@ -15,7 +15,9 @@
     }
   });
 
-  let steps: Step[] = [{ matrix: structuredClone($matrix), operation: "" }];
+  let steps: Step[] = [
+    { id: "start", matrix: structuredClone($matrix), operation: "" },
+  ];
   let undoBuffer: Step[] = [];
   let error = "";
 </script>
@@ -27,7 +29,7 @@
   <RowOpsController bind:steps bind:undoBuffer bind:error />
   <HistoryController bind:steps bind:undoBuffer />
   <button
-    class="bg-black text-white p-1 m-1 rounded-md hover:bg-gray-700"
+    class="bg-black text-white p-1 m-1 rounded-md hover:bg-gray-800"
     on:click={() => {
       goto("../");
     }}>New Matrix</button

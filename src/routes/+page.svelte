@@ -75,7 +75,7 @@
         />
         <button
           type="submit"
-          class="my-2 p-3 bg-black text-white rounded-md transition-all"
+          class="my-2 p-3 bg-black text-white rounded-md transition-all hover:bg-gray-800"
           >calculate</button
         >
       </form>
